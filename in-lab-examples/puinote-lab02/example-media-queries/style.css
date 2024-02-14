@@ -17,7 +17,16 @@ body {
 }
 
 .column.responsive {
+  /* width:100%; */
 }
 
 .container.responsive {
+  flex-wrap:wrap;
+}
+
+@media only screen and (max-width:600px){
+  .column.responsive{
+    /* width:33%; */
+    display:none;
+  }
 }

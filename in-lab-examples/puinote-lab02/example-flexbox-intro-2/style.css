@@ -33,3 +33,18 @@ body {
   margin: 8px;
   padding: 8px;
 }
+
+.item_1{
+  order:5;
+  align-self: center;
+}
+
+.item_2{
+  flex-grow:8;
+}
+
+.item_4{
+  flex-basis:200px;
+}
+
+/* Question: so why do we need to call the class multiple times? */
