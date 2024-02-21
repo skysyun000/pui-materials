@@ -4,7 +4,12 @@ body {
 
 .big_container {
   width: 500px;
+  /* height: 500px; */
   background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
 }
 
 .big_container div {
@@ -15,6 +20,7 @@ body {
   padding: 8px;
 }
 
+<<<<<<< Updated upstream:in-lab-examples/puinote-lab02/example-flexbox-intro-1/style.css
 .small_container p {
   width: 50px;
   background-color: darkgrey;
@@ -22,3 +28,12 @@ body {
   margin: 8px;
   padding: 8px;
 }
+=======
+.small_container{
+  width: 100px;
+  background-color: grey;
+  color: white;
+  margin: 8px;
+  padding: 8px;
+}
+>>>>>>> Stashed changes:in-lab-examples/puinote-lab02/example-flexbox-intro/style.css
