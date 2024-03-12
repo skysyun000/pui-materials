@@ -85,3 +85,34 @@ function submitNote() {
   // Nothing here yet!
   console.log("Submitted Note!")
 }
+
+function submitNote(){
+  const inputImageURL = document.querySelector('#note-editor-image');
+  const inputTitle = document.querySelector('#note-editor-title');
+  const inputBody = document.querySelector('#note-editor-body');
+
+  const newNoteCard = addNewNote(inputImageURL.src,inputTitle.value,inputBody.value);
+  createElement(newNoteCard);
+
+  saveToLocalStorage();
+}
+
+function saveToLocalStorage (){
+  const notecardArray = Array.from(notecardSet);
+  const notecardArrayString = JSON.stringify(notecardArray);
+  localStorage.setItem('storedNotes', notecardArrayString);
+
+}
+
+function retrieveFromLocalStorage(){
+  const notecardArrayString = localStorage.getItem('storedNotes');
+  const notecardArray = JSON.parse(notecardArrayString);
+  for (const noteData of notecardArray){
+    const notecard = addNewNote(noteData.noteImageURL, noteData.noteTitle, noteData.noteBody);
+    createElement(notecard);
+  }
+}
+
+if (localStorage.getItem('storedNotes')!= null){
+  retrieveFromLocalStorage();
+}
