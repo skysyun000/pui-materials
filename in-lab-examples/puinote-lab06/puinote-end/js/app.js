@@ -115,7 +115,7 @@ function retrieveFromLocalStorage() {
   const notecardArray = JSON.parse(notecardArrayString);
   for (const noteData of notecardArray) {
     const notecard = addNewNote(noteData.noteImageURL, noteData.noteTitle,
-      noteData.noteBody);
+      noteData.noteBody)
     createElement(notecard);
   }
 }
