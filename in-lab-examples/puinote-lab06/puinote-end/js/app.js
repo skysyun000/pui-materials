@@ -38,13 +38,13 @@ function createElement(notecard) {
   // make a clone of the notecard template
   const template = document.querySelector('#notecard-template');
   const clone = template.content.cloneNode(true);
-  
+  console.log(clone);
   // connect this clone to our notecard.element
   // from this point we only need to refer to notecard.element
   notecard.element = clone.querySelector('.notecard');
 
   const btnDelete = notecard.element.querySelector('.icon-delete');
-  console.log(btnDelete);
+  console.log(notecard.element);
   btnDelete.addEventListener('click', () => {
     deleteNote(notecard);
   });
